@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Galerie filtrée</title>
+  <style>
+    .item { display: none; margin: 10px; }
+  </style>
+</head>
+<body>
+
+<script>
+const password = "motdepasse";
+const user = prompt("Mot de passe");
+if (user !== password) {
+  document.body.innerHTML = "Accès refusé";
+}
+</script>
+
+<h2>Filtrer par thème</h2>
+
+<!-- OPTIONS A COCHER -->
+<!-- OPTIONS A COCHER -->
+<!-- OPTIONS A COCHER -->
+<!-- OPTIONS A COCHER -->
+<!-- OPTIONS A COCHER -->
+<!-- OPTIONS A COCHER -->
+<!-- OPTIONS A COCHER -->
+<!-- OPTIONS A COCHER -->
+
+
+<label><input type="checkbox" value="chimie"> fait par Joan </label>
+<label><input type="checkbox" value="chimie"> fait par Simon </label>
+<label><input type="checkbox" value="chimie"> fait par Laura </label>
+<label><input type="checkbox" value="chimie"> fait par Emilia </label>
+<label><input type="checkbox" value="chimie"> fait par Louis </label>
+<label><input type="checkbox" value="chimie"> fait par Mathieu </label>
+<label><input type="checkbox" value="chimie"> ca parle de Simon </label>
+<label><input type="checkbox" value="chimie"> ca parle de Laura </label>
+<label><input type="checkbox" value="chimie"> ca parle de Emilia </label>
+<label><input type="checkbox" value="chimie"> ca parle de Louis </label>
+<label><input type="checkbox" value="chimie"> ca parle de Mathieu </label>
+<label><input type="checkbox" value="chimie"> ca parle de Guilhem </label>
+<label><input type="checkbox" value="chimie"> ca parle de Edurado </label>
+<label><input type="checkbox" value="chimie"> ca parle de Melinda </label>
+<label><input type="checkbox" value="chimie"> ca parle de Lise-Marie </label>
+
+<label><input type="checkbox" value="chimie"> nanoparticules </label>
+<label><input type="checkbox" value="chimie"> articles ou revue </label>
+<label><input type="checkbox" value="chimie"> ESRF </label>
+
+<hr>
+
+<!-- LISTE DES IMAGES -->
+<div class="item" data-tags="ESRF">
+  <img src="images/image1.jpg" width="300">
+</div>
+
+<!-- LISTE DES VIDEOS -->
+<div class="item" data-tags="ESRF">
+  <video width="300" controls>
+    <source src="videos/video1.mp4" type="video/mp4">
+  </video>
+</div>
+
+<script>
+const checkboxes = document.querySelectorAll("input[type=checkbox]");
+const items = document.querySelectorAll(".item");
+
+checkboxes.forEach(cb => cb.addEventListener("change", filterItems));
+
+function filterItems() {
+  const selected = Array.from(checkboxes)
+    .filter(cb => cb.checked)
+    .map(cb => cb.value);
+
+  items.forEach(item => {
+    const tags = item.dataset.tags.split(" ");
+    const show = selected.length === 0 || selected.some(tag => tags.includes(tag));
+    item.style.display = show ? "block" : "none";
+  });
+}
+
+filterItems();
+</script>
+
+</body>
+</html>
