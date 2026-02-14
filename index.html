@@ -14,9 +14,26 @@
 
     /* Contenu des images/videos */
     .content {
-      margin-left: 220px;
-      padding: 10px;
+      flex: 1;
+      padding: 15px;
+      box-sizing: border-box;
+    
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
     }
+
+.item {
+  display: none;
+}
+
+.item img,
+.item video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 
     /* Cases à cocher verticales */
     .sidebar label {
@@ -76,43 +93,43 @@ if (user === password) {
 <!-- Contenu (images et vidéos) -->
 <div class="content">
   <div class="item" data-tags="ESRF about_Guilhem about_Joan about_Eduardo">
-    <img src="images/image1.png" width="600">
+    <img src="images/image1.png" width="500">
   </div>
 
   <div class="item" data-tags="about_Laura about_Joan">
-    <img src="images/image2.png" width="600">
+    <img src="images/image2.png" width="500">
   </div>
 
   <div class="item" data-tags="about_Laura about_Joan">
-    <img src="images/image3.png" width="600">
+    <img src="images/image3.png" width="500">
   </div>
 
   <div class="item" data-tags="about_Emilia">
-    <img src="images/image4.png" width="600">
+    <img src="images/image4.png" width="500">
   </div>
 
   <div class="item" data-tags="about_Guilhem">
-    <img src="images/image5.png" width="600">
+    <img src="images/image5.png" width="500">
   </div>
   
   <div class="item" data-tags="about_Joan">
-    <img src="images/image6.png" width="600">
+    <img src="images/image6.png" width="500">
   </div>
 
   <div class="item" data-tags="ESRF">
-    <img src="images/image7.png" width="600">
+    <img src="images/image7.png" width="500">
   </div>
 
   <div class="item" data-tags="ESRF">
-    <img src="images/image8.png" width="600">
+    <img src="images/image8.png" width="500">
   </div>
 
   <div class="item" data-tags="about_Guilhem">
-    <img src="images/image9.png" width="600">
+    <img src="images/image9.png" width="500">
   </div>
   
   <div class="item" data-tags="about_peoples_lab">
-    <img src="images/image10.png" width="600">
+    <img src="images/image10.png" width="500">
   </div>
 
 
@@ -120,7 +137,7 @@ if (user === password) {
   
 
   <div class="item" data-tags="ESRF">
-    <video width="600" controls>
+    <video width="500" controls>
       <source src="videos/video1.mp4" type="video/mp4">
     </video>
   </div>
