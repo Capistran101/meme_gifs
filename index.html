@@ -31,40 +31,46 @@
     }
   </style>
 </head>
-<body>
+<body style="display:none;">
 
 <script>
 const password = "motdepasse";
 const user = prompt("Mot de passe");
-if (user !== password) {
-  document.body.innerHTML = "Accès refusé";
+
+if (user === password) {
+  document.body.style.display = "block";
+} else {
+  document.body.innerHTML = "<h1>Accès refusé</h1>";
 }
 </script>
+
 
 <!-- Sidebar avec toutes les checkboxes -->
 <div class="sidebar">
   <h2>Filtrer par thème</h2>
-  <label><input type="checkbox" value="fait_par_Joan"> fait par Joan</label>
-  <label><input type="checkbox" value="fait_par_Simon"> fait par Simon</label>
-  <label><input type="checkbox" value="fait_par_Laura"> fait par Laura</label>
-  <label><input type="checkbox" value="fait_par_Emilia"> fait par Emilia</label>
-  <label><input type="checkbox" value="fait_par_Louis"> fait par Louis</label>
-  <label><input type="checkbox" value="fait_par_Mathieu"> fait par Mathieu</label>
+  <label><input type="checkbox" value="fait_par_Joan"> by Joan</label>
+  <label><input type="checkbox" value="fait_par_Simon"> by Simon</label>
+  <label><input type="checkbox" value="fait_par_Laura"> by Laura</label>
+  <label><input type="checkbox" value="fait_par_Emilia"> by Emilia</label>
+  <label><input type="checkbox" value="fait_par_Louis"> by Louis</label>
+  <label><input type="checkbox" value="fait_par_Mathieu"> by Mathieu</label>
 
-  <label><input type="checkbox" value="about_Joan"> ca parle de Joan</label>
-  <label><input type="checkbox" value="about_Simon"> ca parle de Simon</label>
-  <label><input type="checkbox" value="about_Laura"> ca parle de Laura</label>
-  <label><input type="checkbox" value="about_Emilia"> ca parle de Emilia</label>
-  <label><input type="checkbox" value="about_Louis"> ca parle de Louis</label>
-  <label><input type="checkbox" value="about_Mathieu"> ca parle de Mathieu</label>
-  <label><input type="checkbox" value="about_Guilhem"> ca parle de Guilhem</label>
-  <label><input type="checkbox" value="about_Eduardo"> ca parle de Eduardo</label>
-  <label><input type="checkbox" value="about_Melinda"> ca parle de Melinda</label>
-  <label><input type="checkbox" value="about_Lise-Marie"> ca parle de Lise-Marie</label>
+  <label><input type="checkbox" value="about_Joan"> about Joan</label>
+  <label><input type="checkbox" value="about_Simon"> about Simon</label>
+  <label><input type="checkbox" value="about_Laura"> about Laura</label>
+  <label><input type="checkbox" value="about_Emilia"> about Emilia</label>
+  <label><input type="checkbox" value="about_Louis"> about Louis</label>
+  <label><input type="checkbox" value="about_Mathieu"> about Mathieu</label>
+  <label><input type="checkbox" value="about_Guilhem"> about Guilhem</label>
+  <label><input type="checkbox" value="about_Eduardo"> about Eduardo</label>
+  <label><input type="checkbox" value="about_peoples_lab"> about des gens du labo </label>
+  <label><input type="checkbox" value="about_Lise-Marie"> about Lise-Marie</label>
 
   <label><input type="checkbox" value="nanoparticules"> nanoparticules</label>
   <label><input type="checkbox" value="articles_ou_revue"> articles ou revue</label>
   <label><input type="checkbox" value="ESRF"> ESRF</label>
+  <label><input type="checkbox" value="general"> general </label>
+
 </div>
 
 <!-- Contenu (images et vidéos) -->
@@ -80,6 +86,38 @@ if (user !== password) {
   <div class="item" data-tags="about_Laura about_Joan">
     <img src="images/image3.png" width="300">
   </div>
+
+  <div class="item" data-tags="about_Emilia">
+    <img src="images/image4.png" width="300">
+  </div>
+
+  <div class="item" data-tags="about_Guilhem">
+    <img src="images/image5.png" width="300">
+  </div>
+  
+  <div class="item" data-tags="about_Joan">
+    <img src="images/image6.png" width="300">
+  </div>
+
+  <div class="item" data-tags="ESRF">
+    <img src="images/image7.png" width="300">
+  </div>
+
+  <div class="item" data-tags="ESRF">
+    <img src="images/image8.png" width="300">
+  </div>
+
+  <div class="item" data-tags="about_Guilhem">
+    <img src="images/image9.png" width="300">
+  </div>
+  
+  <div class="item" data-tags="about_peoples_lab">
+    <img src="images/image10.png" width="300">
+  </div>
+
+
+  
+  
 
   <div class="item" data-tags="ESRF">
     <video width="300" controls>
