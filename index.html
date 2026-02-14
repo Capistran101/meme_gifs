@@ -4,52 +4,34 @@
   <meta charset="utf-8">
   <title>Meme et Gifs</title>
   <style>
+    /* Sidebar */
     .sidebar {
-  float: left;           /* met la sidebar à gauche */
-  width: 200px;          /* largeur de la sidebar */
-  padding: 10px;
-  border-right: 1px solid #ccc;
-}
+      float: left;
+      width: 200px;
+      padding: 10px;
+      border-right: 1px solid #ccc;
+    }
 
-/* Conteneur pour les images/videos */
-.content {
-  margin-left: 220px;    /* espace à droite de la sidebar */
-}
+    /* Contenu des images/videos */
+    .content {
+      margin-left: 220px;
+      padding: 10px;
+    }
 
-/* Cases à cocher verticales */
-.sidebar label {
-  display: block;
-  margin-bottom: 5px;
-}
-  
+    /* Cases à cocher verticales */
+    .sidebar label {
+      display: block;
+      margin-bottom: 5px;
+    }
 
-
-
-    
-    .item { display: none; margin: 10px; }
+    /* Items (images et vidéos) */
+    .item {
+      display: none;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
-  <div class="sidebar">
-  <h2>Filtrer par thème</h2>
-  <label><input type="checkbox" value="fait_par_Joan"> fait par Joan</label>
-  <label><input type="checkbox" value="fait_par_Simon"> fait par Simon</label>
-  <label><input type="checkbox" value="about_Laura"> ca parle de Laura</label>
-  <!-- etc. -->
-</div>
-
-<div class="content">
-  <!-- Ici tes images et vidéos -->
-  <div class="item" data-tags="fait_par_Joan about_Laura">
-    <img src="images/image2.png" width="300">
-  </div>
-  <div class="item" data-tags="ESRF">
-    <video width="300" controls>
-      <source src="videos/video1.mp4" type="video/mp4">
-    </video>
-  </div>
-</div>
-
 
 <script>
 const password = "motdepasse";
@@ -59,66 +41,51 @@ if (user !== password) {
 }
 </script>
 
-<h2>Filtrer par thème</h2>
+<!-- Sidebar avec toutes les checkboxes -->
+<div class="sidebar">
+  <h2>Filtrer par thème</h2>
+  <label><input type="checkbox" value="fait_par_Joan"> fait par Joan</label>
+  <label><input type="checkbox" value="fait_par_Simon"> fait par Simon</label>
+  <label><input type="checkbox" value="fait_par_Laura"> fait par Laura</label>
+  <label><input type="checkbox" value="fait_par_Emilia"> fait par Emilia</label>
+  <label><input type="checkbox" value="fait_par_Louis"> fait par Louis</label>
+  <label><input type="checkbox" value="fait_par_Mathieu"> fait par Mathieu</label>
 
-<!-- OPTIONS A COCHER -->
-<!-- OPTIONS A COCHER -->
-<!-- OPTIONS A COCHER -->
-<!-- OPTIONS A COCHER -->
-<!-- OPTIONS A COCHER -->
-<!-- OPTIONS A COCHER -->
-<!-- OPTIONS A COCHER -->
-<!-- OPTIONS A COCHER -->
+  <label><input type="checkbox" value="about_Joan"> ca parle de Joan</label>
+  <label><input type="checkbox" value="about_Simon"> ca parle de Simon</label>
+  <label><input type="checkbox" value="about_Laura"> ca parle de Laura</label>
+  <label><input type="checkbox" value="about_Emilia"> ca parle de Emilia</label>
+  <label><input type="checkbox" value="about_Louis"> ca parle de Louis</label>
+  <label><input type="checkbox" value="about_Mathieu"> ca parle de Mathieu</label>
+  <label><input type="checkbox" value="about_Guilhem"> ca parle de Guilhem</label>
+  <label><input type="checkbox" value="about_Eduardo"> ca parle de Eduardo</label>
+  <label><input type="checkbox" value="about_Melinda"> ca parle de Melinda</label>
+  <label><input type="checkbox" value="about_Lise-Marie"> ca parle de Lise-Marie</label>
 
-
-<label><input type="checkbox" value="fait_par_joan"> fait par Joan </label>
-<label><input type="checkbox" value="fait_par_Simon"> fait par Simon </label>
-<label><input type="checkbox" value="fait_par_Laura"> fait par Laura </label>
-<label><input type="checkbox" value="fait_par_Emilia"> fait par Emilia </label>
-<label><input type="checkbox" value="fait_par_Louis"> fait par Louis </label>
-<label><input type="checkbox" value="fait_par_Mathieu"> fait par Mathieu </label>
-<label><input type="checkbox" value="about_Joan"> ca parle de Joan </label>
-<label><input type="checkbox" value="about_Simon"> ca parle de Simon </label>
-<label><input type="checkbox" value="about_Laura"> ca parle de Laura </label>
-<label><input type="checkbox" value="about_Emilia"> ca parle de Emilia </label>
-<label><input type="checkbox" value="about_Louis"> ca parle de Louis </label>
-<label><input type="checkbox" value="about_Mathieu"> ca parle de Mathieu </label>
-<label><input type="checkbox" value="about_Guilhem"> ca parle de Guilhem </label>
-<label><input type="checkbox" value="about_Eduardo"> ca parle de Edurado </label>
-<label><input type="checkbox" value="about_Melinda"> ca parle de Melinda </label>
-<label><input type="checkbox" value="about_Lise-Marie"> ca parle de Lise-Marie </label>
-<label><input type="checkbox" value="nanoparticules"> nanoparticules </label>
-<label><input type="checkbox" value="articles_ou_revue"> articles ou revue </label>
-<label><input type="checkbox" value="ESRF"> ESRF </label>
-
-<hr>
-
-<!-- LISTE DES IMAGES -->
-  <!-- LISTE DES IMAGES -->
-  <!-- LISTE DES IMAGES -->
-  <!-- LISTE DES IMAGES -->
-  <!-- LISTE DES IMAGES -->
-  <!-- LISTE DES IMAGES -->
-  <!-- LISTE DES IMAGES -->
-<div class="item" data-tags="ESRF about_Guilhem about_Joan about_Eduardo">
-  <img src="images/image1.png" width="300">
+  <label><input type="checkbox" value="nanoparticules"> nanoparticules</label>
+  <label><input type="checkbox" value="articles_ou_revue"> articles ou revue</label>
+  <label><input type="checkbox" value="ESRF"> ESRF</label>
 </div>
 
+<!-- Contenu (images et vidéos) -->
+<div class="content">
+  <div class="item" data-tags="ESRF about_Guilhem about_Joan about_Eduardo">
+    <img src="images/image1.png" width="300">
+  </div>
 
-<div class="item" data-tags="about_Laura about_Joan">
-  <img src="images/image2.png" width="300">
-</div>
+  <div class="item" data-tags="about_Laura about_Joan">
+    <img src="images/image2.png" width="300">
+  </div>
 
-<div class="item" data-tags="about_Laura about_Joan">
-  <img src="images/image3.png" width="300">
-</div>
-  
+  <div class="item" data-tags="about_Laura about_Joan">
+    <img src="images/image3.png" width="300">
+  </div>
 
-<!-- LISTE DES VIDEOS -->
-<div class="item" data-tags="ESRF">
-  <video width="300" controls>
-    <source src="videos/video1.mp4" type="video/mp4">
-  </video>
+  <div class="item" data-tags="ESRF">
+    <video width="300" controls>
+      <source src="videos/video1.mp4" type="video/mp4">
+    </video>
+  </div>
 </div>
 
 <script>
@@ -126,7 +93,6 @@ const checkboxes = document.querySelectorAll("input[type=checkbox]");
 const items = document.querySelectorAll(".item");
 
 checkboxes.forEach(cb => cb.addEventListener("change", filterItems));
-
 
 function filterItems() {
   const selected = Array.from(checkboxes)
@@ -152,12 +118,7 @@ function filterItems() {
   });
 }
 
-
-
-
-
-  
-
+// Afficher correctement au chargement
 filterItems();
 </script>
 
