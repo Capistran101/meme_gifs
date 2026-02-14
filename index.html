@@ -4,10 +4,52 @@
   <meta charset="utf-8">
   <title>Meme et Gifs</title>
   <style>
+    .sidebar {
+  float: left;           /* met la sidebar à gauche */
+  width: 200px;          /* largeur de la sidebar */
+  padding: 10px;
+  border-right: 1px solid #ccc;
+}
+
+/* Conteneur pour les images/videos */
+.content {
+  margin-left: 220px;    /* espace à droite de la sidebar */
+}
+
+/* Cases à cocher verticales */
+.sidebar label {
+  display: block;
+  margin-bottom: 5px;
+}
+  
+
+
+
+    
     .item { display: none; margin: 10px; }
   </style>
 </head>
 <body>
+  <div class="sidebar">
+  <h2>Filtrer par thème</h2>
+  <label><input type="checkbox" value="fait_par_Joan"> fait par Joan</label>
+  <label><input type="checkbox" value="fait_par_Simon"> fait par Simon</label>
+  <label><input type="checkbox" value="about_Laura"> ca parle de Laura</label>
+  <!-- etc. -->
+</div>
+
+<div class="content">
+  <!-- Ici tes images et vidéos -->
+  <div class="item" data-tags="fait_par_Joan about_Laura">
+    <img src="images/image2.png" width="300">
+  </div>
+  <div class="item" data-tags="ESRF">
+    <video width="300" controls>
+      <source src="videos/video1.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
 
 <script>
 const password = "motdepasse";
