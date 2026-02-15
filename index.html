@@ -32,11 +32,13 @@
       flex: 1;
       padding: 15px;
       box-sizing: border-box;
-
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    
+      display: flex;
+      flex-wrap: wrap;
       gap: 15px;
+      align-items: flex-start;
     }
+
 
     .item {
       display: none;
@@ -44,11 +46,11 @@
       
     .item img,
     .item video {
-      width: 100%;
-      height: 450px;
-      object-fit: contain;   /* pas de rognage */
-      background: #eee;
+      height: 250px;   /* hauteur fixe identique */
+      width: auto;     /* largeur proportionnelle */
       border-radius: 8px;
+      display: block;
+    }
     }
 
 
